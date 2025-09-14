@@ -1,0 +1,21 @@
+---
+all:
+  children:
+    clickhouse:
+      hosts:
+        clickhouse-01:
+          ansible_host: 192.168.7.203
+    vector:
+      hosts:
+        vector-01:
+          ansible_host: 192.168.7.201
+    lighthouse:
+      hosts:
+        lighthouse-01:
+          ansible_host: 192.168.7.203
+  vars:
+    clickhouse_version: "22.3.3.44"
+    vector_version: "0.49.0-1"
+    clickhouse_user: netology
+    clickhouse_password: netology
+    clickhouse_host: 127.0.0.1
